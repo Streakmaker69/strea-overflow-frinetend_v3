@@ -37,6 +37,7 @@
 .side-bar{
     background: linear-gradient(to bottom, #ADD8E6,#D3D3D3,#ffffff);
     min-width: 20%;
+    position: sticky;
 }
 
 .login-btn:hover{
