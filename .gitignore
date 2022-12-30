@@ -10,7 +10,8 @@
 
 # production
 /build
-/src/components/ChatbotAthena
+/src/chat.js
+/src/dummyData.js
 
 # misc
 .DS_Store

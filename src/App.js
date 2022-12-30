@@ -2,7 +2,7 @@ import React,{ useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import KommunicateChat from './chat';
+import Chatbot from './components/Chatbot/Chatbot';
 
 import Navbar from './components/Navbar/Navbar'
 import AllRoutes from './AllRoutes';
@@ -26,7 +26,7 @@ function App() {
       <Router>
         <Navbar />
         <AllRoutes />
-        <KommunicateChat />
+        <Chatbot />
       </Router>
     </div>
   );

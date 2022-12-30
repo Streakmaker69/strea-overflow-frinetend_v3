@@ -13,8 +13,6 @@ const Portfolio = () => {
           <h6> Limited Functionality Here.</h6>
           <a href="https://portfolio-athena.netlify.app">View Portfolio</a>
       </div>
-      <div className = "chatbot-athena">
-      </div>
     </div>
   )
 }
