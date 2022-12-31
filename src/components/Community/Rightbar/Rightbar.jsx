@@ -58,7 +58,7 @@ const Rightbar = ({ user }) => {
 
 
     return(
-      <>
+      <div className="home-right-bar">
         <div className="birthday-container">
           <img className="birthday-img" src={birthday} alt="" />
           <span className="birthday-text"><b> Pola Foster </b> and <b>3 other friends</b> have a birthday today.</span>
@@ -69,14 +69,14 @@ const Rightbar = ({ user }) => {
             <Online key={friend._id} user = {friend} />
           ))}
         </ul>
-      </>
+      </div>
     );
   };
 
   const ProfileRightBar = () => {
     return(
       <>
-        {user.name !== currentUser?.message?.name &&  (
+        {user.name !== currentUser?.message?.name && currentUser &&  (
             <button className="right-bar-follow-btn" onClick={handleFollow}>
               {followed ? 'Remove Friend' : 'Add Friend'}
               {followed ? <Remove /> : <Add />}

@@ -76,17 +76,19 @@ const Post = ({ post, name }) => {
                 <span className="posts-text">{post?.desc}</span>
                 <img src={`${url}/download/${post?.img}`} alt="post" className="posts-img" />
             </div>
-            <div className="posts-bottom">
-                <div className="posts-bottom-left">
-                    <img className="heart-icon" src={heart} onClick={handleLike} alt="" />
-                    <img className="send-icon" src={Send} onClick={handleShare} alt="" />
-                    <span className="posts-like-counter">{like} people like it</span>
+            {User &&
+                <div className="posts-bottom">
+                    <div className="posts-bottom-left">
+                        <img className="heart-icon" src={heart} onClick={handleLike} alt="" />
+                        <img className="send-icon" src={Send} onClick={handleShare} alt="" />
+                        <span className="posts-like-counter">{like} people like it</span>
 
+                    </div>
+                    <div className="posts-bottom-right">
+                        <span className="posts-comment-text">{post.comment} comments</span>
+                    </div>
                 </div>
-                <div className="posts-bottom-right">
-                    <span className="posts-comment-text">{post.comment} comments</span>
-                </div>
-            </div>
+            }
         </div>
     </div>
   )

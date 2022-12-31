@@ -95,3 +95,83 @@
     object-fit: cover;
     cursor: pointer;
 }
+
+.login-btn{
+    top: 50%;
+    left: 50%;
+    padding: 7px 13px;
+    border: solid 1px blue;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-btn:hover{
+    background-color: #000080;
+    color: white;
+}
+
+.routes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.route{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #009ACD;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.route:hover{
+    color: #009ACD;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px){
+
+    .top-bar-left{
+        flex: 1;
+    }
+
+    .logo{
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+
+    .top-bar-center{
+        margin-left: 10px;
+        max-width: 100px;
+    }
+
+    .search-icon{
+        font-size: 15px !important;
+        margin-left: 6px;
+    }
+
+    .search-input{
+        border: none;
+        width: 60%;
+    }
+
+    .top-bar-icons{
+        display: none;
+    }
+
+    .top-bar-right{
+        flex: 2;
+    }
+}

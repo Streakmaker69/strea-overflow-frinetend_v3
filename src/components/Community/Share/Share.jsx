@@ -20,7 +20,7 @@ const Share = ({pic}) => {
         e.preventDefault();
 
         const newPost = {
-            userId : user?.message?._id,
+            userId : user.message._id,
             desc: desc.current.value
         }
         if(file){

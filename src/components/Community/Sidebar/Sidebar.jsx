@@ -25,32 +25,34 @@ const Sidebar = () => {
   }, [user])
   return (
     <div className="side-bar-container">
-      <div className="side-bar-wrapper">
-        <ul className="side-bar-list">
-          <li className="side-bar-list-item">
-            <RssFeed className="side-bar-icon" />
-            <Link to="/Community" style={{textDecoration: "none"}}><span className="side-bar-list-item-text">Feed</span></Link>
-          </li>
-          <li className="side-bar-list-item">
-            <Chat className="side-bar-icon" />
-            <Link to={`/Community/profile/${user?.message?.name}`} style={{textDecoration: "none"}}><span className="side-bar-list-item-text">Profile</span></Link>
-          </li>
-          {/* <li className="side-bar-list-item">
-            <PlayCircleFilledOutlined className="side-bar-icon" />
-            <span className="side-bar-list-item-text">Posts</span>
-          </li> */}
-        </ul>
-        <hr className = "side-bar-hr"/>
-        <ul className="side-bar-friend-list">
+      {user &&
+        <div className="side-bar-wrapper">
+          <ul className="side-bar-list">
+            <li className="side-bar-list-item">
+              <RssFeed className="side-bar-icon" />
+              <Link to="/Community" style={{textDecoration: "none"}}><span className="side-bar-list-item-text">Feed</span></Link>
+            </li>
+            <li className="side-bar-list-item">
+              <Chat className="side-bar-icon" />
+              <Link to={`/Community/profile/${user?.message?.name}`} style={{textDecoration: "none"}}><span className="side-bar-list-item-text">Profile</span></Link>
+            </li>
+            {/* <li className="side-bar-list-item">
+              <PlayCircleFilledOutlined className="side-bar-icon" />
+              <span className="side-bar-list-item-text">Posts</span>
+            </li> */}
+          </ul>
+          <hr className = "side-bar-hr"/>
+          <ul className="side-bar-friend-list">
 
-            <ul className="right-bar-friends-list">
-          {userFriends?.map((friend) => (
-            <Closefriends key={friend._id} user = {friend} />
-          ))}
-        </ul>
+              <ul className="right-bar-friends-list">
+            {userFriends?.map((friend) => (
+              <Closefriends key={friend._id} user = {friend} />
+            ))}
+          </ul>
 
-        </ul>
-      </div>
+          </ul>
+        </div>
+      }
     </div>
   )
 }

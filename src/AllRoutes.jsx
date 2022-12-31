@@ -13,7 +13,8 @@ import Users from './pages/Users/Users';
 import UserProfile from './pages/UserProfile/UserProfile';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Community from './pages/Community/Community';
-import Profile from './pages/Community/Profile/Profile'
+import Profile from './pages/Community/Profile/Profile';
+import Timeline from './pages/Community/Timeline';
 
 
 const AllRoutes = () => {
@@ -31,6 +32,7 @@ const AllRoutes = () => {
       <Route path="/Users" element={<Users />} />
       <Route path="/Users/:id" element={<UserProfile />} />
       <Route path="/Community/profile/:name" element={<Profile />} />
+      <Route path="/Community/timeline" element={<Timeline />} />
     </Routes>
   )
 }

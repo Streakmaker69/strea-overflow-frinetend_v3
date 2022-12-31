@@ -16,32 +16,41 @@ const Topbar = () => {
         <div className="top-bar-center">
             <div className="search-bar">
                 <Search className="search-icon" />
-                <input placeholder = "Search for friends, posts or video." className="search-input" />
+                <input placeholder = "Search" className="search-input" />
             </div>
         </div>
+        <div className="routes">
+            <Link to="/Community" className="route">Home</Link>
+            <Link to="/Community/timeline" className="route">Timeline</Link>
+        </div>
+
         <div className="top-bar-right">
-            <div className="top-bar-icons">
-                <div className="top-bar-icon-item">
-                    <Person />
-                    <span className="top-bar-icon-badge">
-                        1
-                    </span>
+            {user &&
+                <div className="top-bar-icons">
+                    <div className="top-bar-icon-item">
+                        <Person />
+                        <span className="top-bar-icon-badge">
+                            1
+                        </span>
+                    </div>
+                    <div className="top-bar-icon-item">
+                        <Chat />
+                        <span className="top-bar-icon-badge">
+                            2
+                        </span>
+                    </div>
+                    <div className="top-bar-icon-item">
+                        <Notifications />
+                        <span className="top-bar-icon-badge">
+                            1
+                        </span>
+                    </div>
                 </div>
-                <div className="top-bar-icon-item">
-                    <Chat />
-                    <span className="top-bar-icon-badge">
-                        2
-                    </span>
-                </div>
-                <div className="top-bar-icon-item">
-                    <Notifications />
-                    <span className="top-bar-icon-badge">
-                        1
-                    </span>
-                </div>
-            </div>
-            <Link to={`/Community/profile/${user?.message?.name}`}><img src={`https://streak-overflow-v2.adaptable.app/download/${user?.message?.profilePicture}`} alt="" className="top-bar-img" /></Link>
+            }
+                { user ? <Link to={`/Community/profile/${user?.message?.name}`}><img src={`https://streak-overflow-v2.adaptable.app/download/${user?.message?.profilePicture}`} alt="" className="top-bar-img" /></Link> : <Link to="/Auth" className="login-btn">Login</Link>}
+
         </div>
+
     </div>
   )
 }
